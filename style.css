@@ -78,7 +78,7 @@ ul {
 
 .credits {
   position: absolute;
-  font-size: 30px;
+  font-size: 40px;
   font-family: 'Gill Sans MT', sans-serif;
   color: #66f3c1;
   text-align: center;
@@ -100,7 +100,7 @@ ul {
 
 .credits:hover {
   transition: 0.5s;
-  font-size: 32px;
+  font-size: 43px;
   color: #00ffa6;
 }
 
@@ -225,7 +225,10 @@ ul {
   }
   #credmove{
     top: 87%;
-    left: 54%;
+    left: 45%;
+  }
+  #credmove:hover{
+    left: 44%.5;
   }
   #blogmove{
     top: 87%;
@@ -267,7 +270,10 @@ ul {
   }
   #credmove{
     top: 87%;
-    left: 51%;
+    left: 43%;
+  }
+  #credmove:hover{
+    left: 42%.5;
   }
   #blogmove{
     top: 87%;
