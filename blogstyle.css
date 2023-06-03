@@ -1,0 +1,203 @@
+@import url('https://fonts.cdnfonts.com/css/norwester');
+@import url('https://fonts.cdnfonts.com/css/railway');
+@import url('https://fonts.cdnfonts.com/css/gill-sans-mt-2');
+
+body {
+  background: url("assets/background.png");
+  color: #338071;
+  font-family: Verdana;
+}
+
+#postheader{
+    position: absolute;
+    font-size: 30px;
+    font-family: 'Norwester', sans-serif;
+    color: #00000074;
+    font-style: italic;
+}
+
+#paragraph1{
+    position: absolute;
+    font-size: 17px;
+    font-family: 'Railway', sans-serif;
+    color: #00000046;
+}
+
+#intro{
+    position: absolute;
+    font-size: 15px;
+    font-family: 'Norwester', sans-serif;
+    color: #00000074;
+}
+
+h1 {
+  z-index: 2;
+  position: absolute;
+  font-family: 'Norwester', sans-serif;
+  color: #0000004e;
+  -webkit-text-fill-color: #1cc68d;
+  -webkit-text-stroke: 1.8px;
+  font-size: 50px;
+  font-style: italic;
+}
+
+.bar1{
+  z-index: 1;
+  background: linear-gradient(270deg, #18c28c, #2cf7b7, #18c28c);
+  background-size: 600% 600%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 3000px;
+  height: 52px;
+  animation: gradient 15s ease infinite;
+  border: solid #0b865bd6;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 2px;
+}
+
+.bloghomebg{
+    position: absolute;
+    z-index: -998;
+    background: #136f56;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #00000078;
+    width: 380px;
+    height: 220px;
+  }
+
+  .bloghomebg:hover{
+    position: absolute;
+    background: #198a6c;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #00000078;
+    transition: 0.2s;
+  }
+
+.bloghomebg2{
+    position: absolute;
+    z-index: -997;
+    background: #345e52;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #000000a4;
+    width: 380px;
+    height: 220px;
+    filter: blur(1px);
+  }
+
+#crediticon {
+    z-index: 3;
+	position: absolute;
+	display: sticky;
+	padding: 4px 7px;
+	background: #11de9d;
+	box-shadow: 3px 3px 0 #08a67e;
+	border-radius: 20px;
+}
+
+#crediticon:hover {
+	transition: 0.2s;
+	box-shadow: 5px 5px 0 #0acb9b;
+	background: #49ffc5;
+	width: 70px;
+	height: 70px;
+	filter: drop-shadow(0px 0px 5px #00000028);
+}
+
+#homeicon {
+    z-index: 3;
+	position: absolute;
+	display: sticky;
+	padding: 4px 7px;
+	background: #11de9d;
+	box-shadow: 3px 3px 0 #08a67e;
+	border-radius: 20px;
+}
+
+#homeicon:hover {
+	transition: 0.2s;
+	box-shadow: 5px 5px 0 #0acb9b;
+	background: #49ffc5;
+	width: 70px;
+	height: 70px;
+	filter: drop-shadow(0px 0px 5px #00000028);
+}
+
+
+@media all and (min-width: 500px) {
+    .header {
+        left: 0%;
+        top: -75%;
+      }
+    #homeicon{
+        top: 0.2%;
+        left: 85%;
+    }
+    #crediticon{
+        top: 0.2%;
+        left: 93%;
+    }
+    .bloghomebg{
+        top: 130%;
+        left: 1.5%;
+    }
+    .bloghomebg2{
+        top: 130%;
+        left: 15%;
+    }
+    #postheader{
+        top: 100%;
+        left: 1.8%;
+    }
+    #paragraph1{
+        top: 280%;
+        left: 1.8%;
+    }
+    #intro{
+        top: 495%;
+        left: 8.5%;
+    }
+}
+
+@media all and (min-width: 900px) {
+  .header {
+    left: 0%;
+    top: -75%;
+  }
+  #homeicon{
+    top: 0.2%;
+    left: 90%;
+}
+#crediticon{
+    top: 0.2%;
+    left: 95%;
+}
+.bloghomebg{
+    top: 130%;
+    left: 7%;
+}
+.bloghomebg2{
+    top: 130%;
+    left: 23%;
+}
+#postheader{
+    top: 100%;
+    left: 7.5%;
+}
+#paragraph1{
+    top: 280%;
+    left: 7.4%;
+}
+#intro{
+    top: 495%;
+    left: 14.2%;
+}
+}
+
+@keyframes gradient {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}

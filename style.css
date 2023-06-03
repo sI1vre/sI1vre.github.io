@@ -1,0 +1,282 @@
+@import url('https://fonts.cdnfonts.com/css/norwester');
+@import url('https://fonts.cdnfonts.com/css/railway');
+@import url('https://fonts.cdnfonts.com/css/gill-sans-mt-2');
+
+body {
+  background: url("assets/background.png");
+  color: #338071;
+  font-family: Verdana;
+}
+
+.header {
+  position: absolute;
+  font-family: 'Norwester', sans-serif;
+  color: #0000004e;
+  -webkit-text-fill-color: #1cc68d;
+  -webkit-text-stroke: 1.8px;
+  font-size: 120px;
+  font-style: italic;
+}
+
+ul {
+  position: absolute;
+  color: #66f3c1;
+  font-size: 25px;
+  font-family: 'Railway', sans-serif;
+}
+
+.icon {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: solid;
+  border-color: #28ba8c;
+  border-radius: 15px;
+  box-shadow: 1px 1px 0px #28ba8c;
+}
+
+.tiktok {
+  position: absolute;
+  width: 161px;
+  height: 21px;
+}
+
+.bar1{
+  z-index: 1;
+  background: linear-gradient(270deg, #18c28c, #2cf7b7, #18c28c);
+  background-size: 600% 600%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 3000px;
+  height: 15px;
+  animation: gradient 15s ease infinite;
+  border: solid #0b865bd6;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 2px;
+}
+
+.bar{
+  z-index: 2;
+  background: linear-gradient(270deg, #18c28c, #2cf7b7, #18c28c);
+  background-size: 600% 600%;
+  position: fixed;
+  bottom: 0%;
+  left: 70%;
+  width: 600px;
+  height: 15px;
+  animation: gradient 15s ease infinite;
+  border: solid #0b865bd6;
+  border-right-width: 0px;
+  border-top-width: 2px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  transform: skew(45deg);
+}
+
+.credits {
+  position: absolute;
+  font-size: 20px;
+  font-family: 'Gill Sans MT', sans-serif;
+  color: #66f3c1;
+  filter: drop-shadow(0px 0px 2px #66f3c1);
+  font-style: italic;
+  text-align: center;
+}
+
+#vibe{
+  font-size: 13px;
+}
+
+#twiticon {
+	position: absolute;
+	display: flex;
+	padding: 4px 7px;
+	background: #1DA1F2;
+	box-shadow: 3px 3px 0 #0d75b5;
+	border-radius: 20px;
+}
+
+#twiticon:hover {
+	transition: 0.2s;
+	box-shadow: 5px 5px 0 #085280;
+	background: #38adf5;
+	filter: drop-shadow(0px 0px 5px #00000028);
+}
+
+#reddicon {
+	position: absolute;
+	display: flex;
+	padding: 4px 7px;
+	background: #ff4500;
+	box-shadow: 3px 3px 0 #972b03;
+	border-radius: 20px;
+}
+
+#reddicon:hover {
+	transition: 0.2s;
+	box-shadow: 5px 5px 0 #661d02;
+	background: #ff642c;
+	filter: drop-shadow(0px 0px 5px #00000028);
+}
+
+#discicon {
+	position: absolute;
+	display: flex;
+	padding: 4px 7px;
+	background: #7289DA;
+	box-shadow: 3px 3px 0 #3c4c85;
+	border-radius: 20px;
+}
+
+#discicon:hover {
+	transition: 0.2s;
+	box-shadow: 5px 5px 0 #253363;
+	background: #93a9fa;
+	filter: drop-shadow(0px 0px 5px #00000028);
+}
+
+.crediticon {
+	position: absolute;
+	display: flex;
+	padding: 4px 7px;
+	background: #11de9d;
+	box-shadow: 3px 3px 0 #08a67e;
+	border-radius: 20px;
+}
+
+.crediticon:hover {
+	transition: 0.2s;
+	box-shadow: 5px 5px 0 #0acb9b;
+	background: #49ffc5;
+	width: 70px;
+	height: 70px;
+	filter: drop-shadow(0px 0px 5px #00000028);
+}
+
+.blogicon {
+	position: absolute;
+	display: flex;
+	padding: 4px 7px;
+	background: #11de9d;
+	box-shadow: 3px 3px 0 #08a67e;
+	border-radius: 20px;
+}
+
+.blogicon:hover {
+	transition: 0.2s;
+	box-shadow: 5px 5px 0 #0acb9b;
+	background: #49ffc5;
+	width: 70px;
+	height: 70px;
+	filter: drop-shadow(0px 0px 5px #00000028);
+}
+
+@media all and (min-width: 500px) {
+  .header {
+    left: 10%;
+    top: -450%;
+  }
+  ul {
+    top: 940%;
+    left: 14.5%;
+  }
+  .icon {
+    top: 940%;
+    left: 4.3%;
+  }
+  #twiticon {
+    top: 3250%;
+    left: 6%;
+  }
+  #reddicon {
+    top: 3250%;
+    left: 3%;
+  }
+  #discicon {
+    left: 0%;
+    top: 3250%;
+  }
+  #vibe{
+    top: 85%;
+    left: 73%;
+  }
+  .tiktok{
+    top: 93%;
+    left: 77%;
+  }
+  #blogicon{
+    top: 85%;
+    left: 40%;
+  }
+  #crediticon{
+    top: 85%;
+    left: 55%;
+  }
+  #credmove{
+    top: 80%;
+    left: 56.5%;
+  }
+  #blogmove{
+    top: 80%;
+    left: 42.5%;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .header {
+    left: 15%;
+  }
+  ul {
+    top: 980%;
+    left: 19.6%;
+  }
+  .icon {
+    top: 1000%;
+    left: 9.5%;
+  }
+  #twiticon {
+    left: 6%;
+    top: 3300%;
+  }
+  #reddicon {
+    left: 3%;
+    top: 3300%;
+  }
+  #discicon {
+    left: 0%;
+    top: 3300%;
+  }
+  #vibe{
+    top: 85%;
+    left: 77.5%;
+  }
+  .tiktok{
+    top: 93%;
+    left: 80%;
+  }
+  #blogicon{
+    top: 85%;
+    left: 40%;
+  }
+  #crediticon{
+    top: 85%;
+    left: 50%;
+  }
+  #credmove{
+    top: 80.3%;
+    left: 51%;
+  }
+  #blogmove{
+    top: 80.3%;
+    left: 41.8%;
+  }
+}
+
+@keyframes gradient {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
