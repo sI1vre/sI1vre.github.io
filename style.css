@@ -78,12 +78,30 @@ ul {
 
 .credits {
   position: absolute;
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Gill Sans MT', sans-serif;
   color: #66f3c1;
-  filter: drop-shadow(0px 0px 2px #66f3c1);
+  text-align: center;
+  background: #0fc783;
+	box-shadow: 3px 3px 0 #07765e;
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+.credits2 {
+  position: absolute;
+  font-size: 30px;
+  font-family: 'Gill Sans MT', sans-serif;
+  color: #66f3c1;
   font-style: italic;
   text-align: center;
+  filter: drop-shadow(0px 0px 2px #66f3c1);
+}
+
+.credits:hover {
+  transition: 0.5s;
+  font-size: 32px;
+  color: #00ffa6;
 }
 
 #vibe{
@@ -140,7 +158,6 @@ ul {
 
 .crediticon {
 	position: absolute;
-	display: flex;
 	padding: 4px 7px;
 	background: #11de9d;
 	box-shadow: 3px 3px 0 #08a67e;
@@ -158,7 +175,6 @@ ul {
 
 .blogicon {
 	position: absolute;
-	display: flex;
 	padding: 4px 7px;
 	background: #11de9d;
 	box-shadow: 3px 3px 0 #08a67e;
@@ -207,20 +223,12 @@ ul {
     top: 93%;
     left: 77%;
   }
-  #blogicon{
-    top: 85%;
-    left: 40%;
-  }
-  #crediticon{
-    top: 85%;
-    left: 55%;
-  }
   #credmove{
-    top: 80%;
-    left: 56.5%;
+    top: 87%;
+    left: 54%;
   }
   #blogmove{
-    top: 80%;
+    top: 87%;
     left: 42.5%;
   }
 }
@@ -257,21 +265,13 @@ ul {
     top: 93%;
     left: 80%;
   }
-  #blogicon{
-    top: 85%;
-    left: 40%;
-  }
-  #crediticon{
-    top: 85%;
-    left: 50%;
-  }
   #credmove{
-    top: 80.3%;
+    top: 87%;
     left: 51%;
   }
   #blogmove{
-    top: 80.3%;
-    left: 41.8%;
+    top: 87%;
+    left: 40%;
   }
 }
 
