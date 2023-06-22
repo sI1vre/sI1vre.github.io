@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDLC Modding Guide</title>
+    <link rel="stylesheet" href="templatecss.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+  </head>
+  <body>
+
+    <!--    Made by Erik Terwan    -->
+<!--   24th of November 2015   -->
+<!--        MIT License        -->
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+    
+    <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="#one"><li>Setting Up the Template</li></a>
+      <a href="#two"><li>Folders, and Loading Your Script</li></a>
+      <a href="#three"><li>Defining, etc.</li></a>
+      <a href="#four"><li>MPT and Characters</li></a>
+      <a href="#five"><li>Other Coding</li></a>
+      <a href="#six"><li>Packaging</li></a>
+      <a href="#seven"><li>Resources, Tools, etc.</li></a>
+    </ul>
+  </div>
+</nav>
+
+    <h3><- navigation!</h3>
+
+    <h1>DDLC MOD TEMPLATE GUIDE</h1>
+
+    <div class="bar1"></div>
+
+    <h2>Hello, newcomer to DDLC modding!<br>(or not...)</h2>
+
+    <p>So, let's cut right to the chase; you're probably here to learn how to mod DDLC. It's probably overwhelming at first, and I can't blame you. There's a lot of things to learn, like posing, coding...<br>However, to do these things, the first thing you have to know is how to get a mod running. <br><span><strong><i>That's what this is here for.</i></strong></span><br>Setting up the mod template is pretty hard the first time, honestly, so we should probably get that done first.<br><strong>While reading this, keep in mind that the writers assumption is that you aren't looking to make any custom UI or anything very complicated. This is about setting up and packaging your first project, some general Ren'Py tips, and commonly used mod tools to add; nothing else.<br>You should also familiarize yourself with Team Salvatos IP guidelines.</strong></p>
+
+    <h2 id="one">PART ONE - SETTING UP THE TEMPLATE</h2>
+
+    <p>First things first, go to the <a href=https://github.com/GanstaKingofSA/DDLCModTemplate2.0/releases/tag/4.2.2 target=”_blank”>DDLC Mod Template github page</a>. The latest version as of this page is 4.2.2, so we'll go with that.<br>Next to choose between Ren'Py versions; Ren'Py 8 is for more technical stuff, and Ren'Py 6 is really horribly outdated, so you should click on and download DDLCModTemplate-4.2.2.zip.<br>After this, <a href=https://ddlc.moe target=”_blank”>install a base copy of DDLC from ddlc.moe</a> (the steam version is incompatible for modding), and the <a href=https://github.com/GanstaKingofSA/DDLC-ModMaker/releases/tag/1.5.22 target=”_blank”>DDMmaker for Ren'py 7</a>. The DDMmaker assists you opening your project. Finally, <a href=https://www.renpy.org/release/7.5.3 target=”_blank”>install Ren'Py</a>. You can put Ren'Py anywhere but your mod folder.<br><br>Make a folder called "Mods" wherever you want on your PC. Make a folder inside the mods folder. You can call these folders whatever, but I'll call the folder inside the mods folder 'example project'. Then, put your base copy of DDLC into your example project folder. Grab the DDLC mod template zip, and copy the contents into the example project folder. When it says to overwrite, say yes.<br>Next, put your DDMmaker copy into a <strong>separate folder.</strong> Then, load it up. It has no projects on it so far, and that's perfectly normal. Open renpy.exe, click settings, and click projects directory. Then, select the Mods folder. After this, your mod project should show up.<br><br><strong>CONGRATULATIONS! If you've followed all of these steps, your mod should be ready to be started. If the example project has a mod_assets folder in the game folder, you have done everything correct.</strong></p>
+
+    <h2 id="two">PART TWO - MOD TEMPLATE FOLDERS, AND HOW TO LOAD A SEPARATE SCRIPT</h2>
+
+    <p>First thing, drag the game folder of your mod into the text editor of your choice. I recommend Visual Studio Code. <br>The mods template organization can be overwhelming at first. I'll put a explanation of folders and .rpy files down below.<br>I'll give you an in-depth breakdown on how to use anything I assume a new user would want to know later on.<br>...But first, go to definitions.rpy and set config_developer to true. It lets you reload your script in game using SHIFT + R and lets you rollback text.</p>
+
+    <ul>
+      <li>
+        act_two
+          <blockquote>console.rpy - controls the in-game console. not necessary for a first creation unless you want to get very meta...</blockquote>
+          <blockquote>glitchtext.rpy - controls the glitchtext in the game.</blockquote>
+          <blockquote>poems-special.rpy - controls the special poems not given out. will not be explained because i do not understand it.</blockquote>
+        chrs
+          <blockquote>contains all .chr files. not necessary to edit.</blockquote>
+        core
+          <blockquote>nothing should be edited except for credits.rpy, if you want a base DDLC credits experience. for a new modder, the basic end screen is what we'll be going with, however.</blockquote>
+        definitions
+          <blockquote>cgs.rpy - contains base game cg definitions</blockquote>
+          <blockquote>definitions.rpy - contains all base game girl definitions. if you want to define anything new, I recommend making a new definitions file, as this one is large and hard to navigate.</blockquote>
+          <blockquote>effects.rpy and transform.rpy - DO NOT EDIT THIS. contains base game effects, and may be harmed if you dont know what you're doing while editing.</blockquote>
+          <blockquote>splash.rpy - contains splash screen, mod warning screen, etc. not necessary to edit.</blockquote>
+        mod_assets
+          <blockquote>this is where new assets should be put.</blockquote>
+        poem_(x) is for poems. i'll teach you how to edit those later.
+        <br><br><br>uncategorised
+          <blockquote>gui.rpy - defines UI. should probably not be edited until you get the general hang of ren'py.</blockquote>
+          <blockquote>options.rpy - defines a few important things we'll get onto later, but can be edited.</blockquote>
+          <blockquote>screens.rpy - DO NOT EDIT. this is very complicated for a newcomer, and i'd recommend keeping it to the base game for your new project. this defines the settings, main menu, etc.</blockquote>
+          <blockquote>script.rpy - probably the most important folder. we will edit this.</blockquote>
+      </li>
+    </ul>
+
+    <p>Now, to start a mod. First, open script.rpy. Remove lines 25 to 18 to prevent any conflicts. Then, remove line 46. After this, put in a call statement. I'll call it example, so put in 'call example'. Next, make a new .rpy file. It can be called whatever you want, but again, I'll call it example.rpy. In example.rpy, write this down:</p>
+
+    <img class="image" src="assets/image1.png">
+    
+    <p>(if it makes it easier to follow, the theme in visual studio code i use is the <a href="https://github.com/doki-theme/doki-theme-vscode">sayori dark theme from the doki theme.</a>)<br>Next, start your project using DDMmaker (by clicking on the 'example project' text) and press new game. If Sayori says 'hello world', you've done it right.</p>
+
+    <h2 id="three">PART THREE - GENERAL CODING</h2>
+
+    <p>First things first, making the characters talk. Each character has a separate key letter defined in the script. For example, if you put s in front of a line of text in quotes like as in the example, she'll say that quote. Yuri is y, Natsuki is n, and Monika is m. The MC is just 'mc', and the narrator talks by putting a quote without any key letter.</p>
+
+    <img class="image" src="assets/image2.png">
+
+    <p>To define a custom character, either go into definitions.rpy or make a new file, and put in "define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")". Change 'ny' to whatever key letter you want, and 'Nat and Yuri' to whatever character you want. If done right, typing that new key letter will have that new character speaking.<br>To show backgrounds, put in "scene bg (BG_NAME)."<br>To make this look nice, you need to add a transition. I recommend wipeleft_scene, so put "scene bg (BG_NAME) with wipeleft_scene". That shows the new BG, wiping all of the characters from the previous scene away. To keep characters, just say 'show bg (BG_name)'.<br>To define a background, do this:
+
+    <img class="image" src="assets/image3.png">
+
+    <p>With this method, the bg name to call is "BG_NAME".<br>To define a normal image, remove 'bg' from the define statement. Normal images can be shown by saying 'show (IMAGENAME)'. Audio can be called by saying 'play music (MUSICNAME)' and stopped by 'stop music (MUSICNAME)'. Adding fadeins also works, etc. 'play music (MUSICNAME) fadein 2.0' and 'stop music (MUSICNAME) fadeout 2.0'.<br>Characters can be placed by using 't11', ex. 'show monika at t11'. while t11 is the basic one that displays the image in the middle, there are others that display it in a different position.<p>
+    <p>Audio is defined in a slightly different way; put your audio definition in as:
+      <br>define audio.MUSICNAME = "mod_assets/filename.ogg"
+    <br>Normal .mp3 files also work. To define a non-looping sound, replace 'play audio MUSICNAME' with 'play sound MUSICNAME'.</p>
+
+    <a href="https://docs.google.com/document/d/1LCS_5lDERM5VardjJ5IDqdXp9zMVL-irespq11mJr7g/edit" target=”_blank”>I also implore you to check out the DDLC scripting guide, which this text hyperlinks to. It has a full, in-depth list of base DDLC music names, where t statements show on the screen, and practically everything else. Ignore the character definitons.</a>
+  
+    <p>Thats how to show backgrounds and other images, but...how about characters?</p>
+
+    <h2 id="four">PART FOUR - DISPLAYING CHARACTERS</h2>
+
+    <p>To put it lightly, how base DDLC displays its characters is not very intuitive or expressive. Thats how <a href=https://github.com/chronoshag/DDLCMPT target=”_blank”>MPT, the community posing tool,</a> was made. Please remember to credit Chronos, Yagamirai10, and Terra for making MPT.<br>Install the files and put the "MPT" folder into your mod_assets folder. MPT is then installed.<br>MPT is complicated, so I recommend you to read <a href=https://docs.google.com/document/d/1aLs7iNa1hPaG_7UolVAxQbzecjq0lLr0T3g1a6jjK_k/edit# target=”_blank”>the official documentation.</a><br>For a quick summary, each character can be displayed as such:</P>
+
+    <img class="image" src="assets/image4.png">
+
+    <p>If you want to define a new character thats in MPT, you'll have to use dynamic character. Basically see this string of code:
+      <br>define e = DynamicCharacter('e_name', image='eileen', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+    <br>Now, change "e" to the key letter, "e_name" to an external character name, and "eileen" to what your characters image is called.</p>
+
+    <img src="assets/image5.png">
+
+    <p>Now, you should know how to show or play pretty much every displayable in Ren'py, in an efficient matter.<br>To hide an image, just put 
+      <br>show IMAGENAME at thide
+    <br>hide IMAGENAME
+    <br>This next script shows all of these things I've taught you in action.</p>
+
+    <img class="image" src="assets/image6.png">
+
+    <h2 id="five">PART FIVE - EXTRAS</h2>
+
+    <p>This segment will cover variables, choices, poems, using the console, glitchtext, and text tags.<br>I'll be using examples in code, as those are easier to annotate than an HTML document. Hover over an image to zoom into it.</p>
+
+    <img class="image" src="assets/image7.png">
+    <img class="image" src="assets/image8.png">
+    <img class="image" src="assets/image9.png">
+    <img class="image" src="assets/image10.png">
+    <img class="image" src="assets/image11.png">
+    <img class="image" src="assets/image12.png">
+    <img class="image" src="assets/image13.png">
+
+    <h2 id="six">PART 6 - FINALIZATION</h2>
+    <p>Congratulations! Your mod is near finishing. First thing, you should go into definitions.rpy and set developer mode to false. Then, go to options.rpy.<br>Set config.name to your mods name, set the config.version to 1.0.0, set the build_name to whatever, and set the save_directory to whatever, also. The window icon is an optional change, but its ideal to change that to your mod logo or something.
+    <br>Next, go into DDMmaker, and click 'build mod'. Select the Ren'Py 7 build template, and press build. When built, it should be in a .zip. From there, its on you to upload it to a site and release your mod. I recommend mediafire.</p>
+
+    <h2 id="seven">PART 7 - RECOMMEND RESOURCES, TOOLS, ETC</h2>
+    <p>I'll put tools and resources I recommend here.</p>
+    <p><strong>REMEMBER TO FOLLOW THE CREATORS, TEAM SALVATOS, AND DDMCS GUIDELINES WHILE USING THESE!</strong></p>
+
+    <h4>COMMUNITY</h4>
+    <a href="https://discord.gg/VgANxgNtR4" target=”_blank”>• the DDMC discord - has a lot of resources in the content section, and also has me in it! ping @silversnow__ to tell me you've read this, i'd love to know that.</a>
+    <br><a href="https://www.reddit.com/r/DDLCMods/" target=”_blank”>• the r/ddlcmods subreddit - where people post their mods, etc. may migrate somewhere after this reddit bullshit, i guess? but i wouldnt bet on it.</a>
+
+    <h4>TOOLS</h4>
+    <a href="https://github.com/methanoliver/awesome-renpy" target=”_blank”>• awesome-renpy - an awesome list for renpy. ddlc is obviously made on renpy, so these all work for it! it must be for renpy 7.5.3 and above, since thats what we're working with.</a>
+    <br><a href="https://github.com/Elckarow/Autofocus" target=”_blank”>• autofocus - autos the focus of the girls.</a>
+    <br><a href="https://github.com/Elckarow/Better-EMR-Phone" target=”_blank”>• phone - lets you use a phone.</a>
+    <br><a href="https://github.com/Elckarow/Expreviewer" target=”_blank”>• pose previewer - enables you to preview poems, etc.</a>
+    <br><a href="https://github.com/GanstaKingofSA/DDLC-OSTPlayer" target=”_blank”>• ost player - lets players play your mods soundtrack ingame.</a>
+    <br><a href="https://itch.io/tools/tag-renpy" target=”_blank”>• itch.io tool dump - itch.io is my saviour...</a>
+
+    <h4>RESOURCES</h4>
+    <a href="https://docs.google.com/document/d/180D53wXv0Hytxafht1Phho1TA5TQJzzA4pWa8UF_LS0/edit#heading=h.htdmgj1r8cfj" target=”_blank”>• the old modding guide - i helped here, too! but its a bit outdated... it has a more advanced breakdown of the stuff here.</a>
+    <br><a href="https://docs.google.com/document/d/14IxtzEaSZVi2OE0majrgkXuOrBUQtlRl6-lR8-1beew/edit" target=”_blank”>• screen guide - how to work with screens.rpy. i edit ui a lot so i can confirm this works! i'd recommend just changing the menu logo first and getting more advanced as you create more projects.</a>
+    <br><a href="https://drive.google.com/drive/folders/1yTohcOnGV6Kw6Lru1cITWt-zwRoGSCm_" target=”_blank”>• community drive - a drive with the majority of standalone assets the community has made in it. honestly..its kind of bad, but its still there!</a>
+    <br><a href="https://docs.google.com/spreadsheets/d/1ZDswf0CjWgxyq3m3LOxnwXXSdY5LFhqMxZwyxTFk4t8/edit" target=”_blank”>• oc list - also by me! this lists every single original character.</a>
+    <br><a href="https://docs.google.com/spreadsheets/d/15wYfDrWLHLtBbijRnwER4wpEavKuYBkwlFGZARE6F4M/edit#gid=0" target=”_blank”>• outfit list - by me! list of every free to use outfit.</a>
+    <br><a href="https://www.reddit.com/r/DDLCMods/comments/oc2ccm/a_gift_for_beginning_modders/" target=”_blank”>• logo psds - made for editing logos.</a>
+    <br><a href="https://itch.io/game-assets/free/genre-visual-novel" target=”_blank”>• itch.io free asset dump - exactly what it says!</a>
+    <br><a href="https://lemmasoft.renai.us/forums/viewtopic.php?t=17302" target=”_blank”>• mugens bg dump - exactly what it says.</a>
+    <br><a href="https://docs.google.com/document/d/1Y-QqFxcQFBBQY4qtBPnieuUNIbOPg_c8YVuLVhS599w/edit" target=”_blank”>• free bgs for modding - exactly what it says...</a>
+
+    <img id="credits" src="assets/credits.png">
+
+  </body>
+</html>
