@@ -92,7 +92,7 @@
 
     <p>Now, to start a mod. First, open script.rpy. Remove lines 25 to 18 to prevent any conflicts. Then, remove line 46. After this, put in a call statement. I'll call it example, so put in 'call example'. Next, make a new .rpy file. It can be called whatever you want, but again, I'll call it example.rpy. In example.rpy, write this down:</p>
 
-    <img class="image" src="image1.PNG">
+    <img class="image" src="image1.png">
     
     <p>(if it makes it easier to follow, the theme in visual studio code i use is the <a href="https://github.com/doki-theme/doki-theme-vscode">sayori dark theme from the doki theme.</a>)<br>Next, start your project using DDMmaker (by clicking on the 'example project' text) and press new game. If Sayori says 'hello world', you've done it right.</p>
 
@@ -104,7 +104,7 @@
 
     <p>To define a custom character, either go into definitions.rpy or make a new file, and put in "define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")". Change 'ny' to whatever key letter you want, and 'Nat and Yuri' to whatever character you want. If done right, typing that new key letter will have that new character speaking.<br>To show backgrounds, put in "scene bg (BG_NAME)."<br>To make this look nice, you need to add a transition. I recommend wipeleft_scene, so put "scene bg (BG_NAME) with wipeleft_scene". That shows the new BG, wiping all of the characters from the previous scene away. To keep characters, just say 'show bg (BG_name)'.<br>To define a background, do this:
 
-    <img class="image" src="assets/image3.PNG">
+    <img class="image" src="assets/image3.png">
 
     <p>With this method, the bg name to call is "BG_NAME".<br>To define a normal image, remove 'bg' from the define statement. Normal images can be shown by saying 'show (IMAGENAME)'. Audio can be called by saying 'play music (MUSICNAME)' and stopped by 'stop music (MUSICNAME)'. Adding fadeins also works, etc. 'play music (MUSICNAME) fadein 2.0' and 'stop music (MUSICNAME) fadeout 2.0'.<br>Characters can be placed by using 't11', ex. 'show monika at t11'. while t11 is the basic one that displays the image in the middle, there are others that display it in a different position.<p>
     <p>Audio is defined in a slightly different way; put your audio definition in as:
@@ -125,26 +125,26 @@
       <br>define e = DynamicCharacter('e_name', image='eileen', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
     <br>Now, change "e" to the key letter, "e_name" to an external character name, and "eileen" to what your characters image is called.</p>
 
-    <img src="assets/image5.PNG">
+    <img src="assets/image5.png">
 
     <p>Now, you should know how to show or play pretty much every displayable in Ren'py, in an efficient matter.<br>To hide an image, just put 
       <br>show IMAGENAME at thide
     <br>hide IMAGENAME
     <br>This next script shows all of these things I've taught you in action.</p>
 
-    <img class="image" src="assets/image6.PNG">
+    <img class="image" src="assets/image6.png">
 
     <h2 id="five">PART FIVE - EXTRAS</h2>
 
     <p>This segment will cover variables, choices, poems, using the console, glitchtext, and text tags.<br>I'll be using examples in code, as those are easier to annotate than an HTML document. Hover over an image to zoom into it.</p>
 
-    <img class="image" src="assets/image7.PNG">
-    <img class="image" src="assets/image8.PNG">
-    <img class="image" src="assets/image9.PNG">
-    <img class="image" src="assets/image10.PNG">
-    <img class="image" src="assets/image11.PNG">
-    <img class="image" src="assets/image12.PNG">
-    <img class="image" src="assets/image13.PNG">
+    <img class="image" src="assets/image7.png">
+    <img class="image" src="assets/image8.png">
+    <img class="image" src="assets/image9.png">
+    <img class="image" src="assets/image10.png">
+    <img class="image" src="assets/image11.png">
+    <img class="image" src="assets/image12.png">
+    <img class="image" src="assets/image13.png">
 
     <h2 id="six">PART 6 - FINALIZATION</h2>
     <p>Congratulations! Your mod is near finishing. First thing, you should go into definitions.rpy and set developer mode to false. Then, go to options.rpy.<br>Set config.name to your mods name, set the config.version to 1.0.0, set the build_name to whatever, and set the save_directory to whatever, also. The window icon is an optional change, but its ideal to change that to your mod logo or something.
