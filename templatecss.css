@@ -28,9 +28,13 @@ body {
   font-family: Verdana;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 h1 {
   position: relative;
-  top: 10;
+  top: 20;
   z-index: 1;
   text-align: center;
   font-family: 'Norwester', sans-serif;
@@ -156,7 +160,7 @@ h6{
   background-size: 600% 600%;
   width: 110%;
   height: 80px;
-  top: 68px;
+  top: 48px;
   left: 0px;
   animation: gradient 15s ease infinite;
   border: solid #1f869dd6;
@@ -176,8 +180,8 @@ h6{
 #menuToggle
 {
   display: block;
-  position: relative;
-  top: 5px;
+  position: fixed;
+  top: 15px;
   left: 10px;
   
   z-index: 2147483647;
@@ -228,7 +232,9 @@ h6{
   margin-bottom: 5px;
   position: relative;
   
-  background: #cdcdcd;
+  background: #2666b3;
+  border: solid;
+  border-color: #114078;
   border-radius: 3px;
   
   z-index: 1;
@@ -257,8 +263,8 @@ h6{
 #menuToggle input:checked ~ span
 {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  transform: rotate(45deg) translate(2px, -1px);
+  background: #008cff;
 }
 
 /*
@@ -275,7 +281,7 @@ h6{
  */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
-  transform: rotate(-45deg) translate(0, -1px);
+  transform: rotate(-45deg) translate(7px, -1px);
 }
 
 /*
@@ -289,8 +295,8 @@ h6{
   width: 300px;
   margin: -100px 5 5 -50px;
   padding: 20px;
-  padding-top: 10px;
-  padding-bottom: -1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   
   background: #5fbbe3;
   border: solid;
