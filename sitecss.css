@@ -291,7 +291,6 @@ h1 {
 	font-size: 100px;
 	filter: drop-shadow(3px 3px 0px #c93d60);
 	text-align: center;
-	position: relative;
 	-webkit-animation: slideIntext 2s forwards;
 	text-shadow:
 		-1px -1px 0 #c93d60,
@@ -402,16 +401,8 @@ h1 {
 }
 
 #topbar {
-	position: relative;
-	top: -580px;
-	left: 0;
-	image-rendering: pixelated;
-	display: flex;
-}
-
-#bottombar {
-	position: relative;
-	top: 90px;
+	position: absolute;
+	top: -100px;
 	left: 0;
 	image-rendering: pixelated;
 	display: flex;
@@ -500,7 +491,7 @@ ul:hover li:not(:hover) {
 }
 
 #bottombar2 {
-	position: relative;
+	position: absolute;
 	top: 278px;
 	left: 0;
 	image-rendering: pixelated;
@@ -531,7 +522,7 @@ h2 {
 	font-size: 30px;
 	filter: drop-shadow(2px 2px 0px #9a1f4a);
 	text-align: center;
-	position: relative;
+	position: absolute;
 	text-shadow:
 		-1px -1px 0 #9a1f4a,
 		1px -1px 0 #9a1f4a,
@@ -546,7 +537,7 @@ h2 {
 	font-size: 120px;
 	filter: drop-shadow(3px 3px 0px #c93d60);
 	text-align: center;
-	position: relative;
+	position: absolute;
 	-webkit-animation: slideIntext 2s forwards;
 	text-shadow:
 		-1px -1px 0 #c93d60,
